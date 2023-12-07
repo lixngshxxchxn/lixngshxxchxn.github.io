@@ -1,0 +1,271 @@
+<!DOCTYPE html> <!--문서 유형-->
+<html>
+    <head> <!--머릿말-->
+        <title>양수진의 홈</title>
+        <meta charset="utf-8" /> <!--utf-8, euc-kr-->
+        <meta name="keywords" content="웹퍼블리싱, 계원, html, css" />
+        <!--link 태그는 head에 사용-->
+
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <style>
+            body{color:green}
+        </style>
+    </head>
+    
+    <body> <!--본문-->
+        <!--a href="https://blog.naver.com/l-s-c">양수진의 블로그</a> / 닻, 목적지를 나타낼 때 사용-->
+        <!--<시작태그>, </종료태그>, <독립형태그 />
+        <시작태그 속성="값">내용</종료태그>
+        <독립형태그 속성="값" />
+        <들여쓰기 취소 shift tab> 
+        <메타 태그의 역할: 캐릭터셋 글자의 유형이 utf-8이다, 그 외에도 역할은 다수-->
+        
+
+        <br /><br />
+
+        <header style="text-align: center;">
+            <br><a href="subfile.html" target="_blank"><i>중간 평가 사이트</i><br/></a>
+        </header>
+
+        <br /><br />
+
+    <h1 style="text-align: center;">대한민국</h1>
+            <h2 style="text-align: center;">서울특별시</h2>
+                <h3 style="text-align: center;">영등포구</h3>
+            <h2 style="text-align: center;">경기도</h2>
+                <h3 style="text-align: center;">의왕시</h3>
+                <h3 style="text-align: center;">안양시</h3>
+    <h1 style="text-align: center;">미국</h1>
+    <h1 style="text-align: center;">일본</h1>
+        <!--h6까지, h7은 html 태그에 속해있지 않음.-->
+
+        <hr />
+
+        <p style="text-align: center;">단어가 모여서 문장, 문장이 모여서 문단
+            한가지 주제를 가지고 있는 문장의 집합
+        </p>
+
+    <p style="text-align: center;">
+        html은            띄어쓰기와
+
+        줄바꿈을 무시한다 <!--띄어쓰기는 한 번만, 줄바꿈은 인식 안 함-->
+    </p>     <!--구분선! / 내용 구분 잘할 것--> <hr />
+    
+    html은            띄어쓰기와
+
+    <br /> 줄바꿈을 무시한다 <!--br 태그 사용은 타인의 화면에서도 그럴싸해야 함. 남용 시 불편을 줄 수 있음 말을 하고 한 번 쉴 때 사용할 것/ html은 정보 전달에만 집중-->
+
+    <br /><br />
+    <strong>강한 강조</strong> <br /><br />
+    <em>강조</em> <br /><br />
+    <!--의미 부여 (사용 권장!)-->
+
+    <b>굵은 글씨</b> <br /><br />
+    <i>기울임</i> <br /><br />
+    <!--모양을 부여 (사용 비권장!)-->
+
+    <!--모양이 아닌 내용을 강조해야 함으로... 태그 사용 지양-->
+    
+    <ins>추가 글</ins> <br /><br />
+    <del>삭제 글</del> <br /><br />
+
+    <u>밑줄 친</u> <br /><br />
+    <strike>가운데 줄</strike>
+    <!--모양 부여-->
+
+    윗첨자<sup>추가되는 설명을 위에 표시</sup>
+    아랫첨자<sub>추가되는 설명을 아래에 표시</sub>
+
+    <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+
+    <ol>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ol>
+
+    <!-- 선택 기준! ul 순서 상관 없음 / ol 순서 상관 있음-->
+
+    <dl>
+        <dt>용어</dt>
+        <dd>용어에 대한 설명</dd>
+        <dt>HTML</dt>
+        <dd>Hyper Text Maarkup Language</dd><br>
+        <dt>HTML</dt>
+        <sup><dd>Hyper Text Maarkup Language</dd></sup>
+    </dl>
+
+    <style>
+        th, td{
+            border: solid 1px black
+        }
+    </style>
+    
+    <br /><br />
+
+    <table summary="table기초">
+        <caption>테이블 기초</caption>
+        <tr> <!--table row 행(줄)-->
+            <th scope="col" rowspan="2">제목1</th> <!--table header / column 열(칸)--> <!--rowspan 세로로 셀 잡아 늘리기-->
+            <th scope="col" colspan="2">제목2</th> <!--colspan 가로로 셀 잡아 늘리기-->
+            <th scope="col">제목3</th>
+        </tr>
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+            <td>내용3</td>
+        </tr>
+        <tr>
+            <td>tr은</td>
+            <td>세로로</td>
+            <td>칸 늘어남</td>
+            <td>세로로!</td>
+        </tr>
+
+        <thead>표제목</thead>
+        <tbody>표본문</tbody>
+        <tfoot>표끝</tfoot>
+    </table>
+
+    <br /><br />
+
+    <div>블록(block)형 구획 나누기</div>
+    <div>블록(block)형 구획 나누기</div>
+    <span>인라인(inline)형 구획 나누기</span>
+    <span>인라인(inline)형 구획 나누기</span>
+    <!--의미 없이 사용하기 좋은 태그-->
+
+    <br /><br /><br /><br />
+
+    <form style="text-align: center;">
+
+        <lable for="name_1">GIVE ME A PASSWORD</lable><br />
+        <input name="name_1" type="text" placeholder="ID" /><br />
+        <input type="password" placeholder="PASSWORD" /><br />
+
+        <input onclick="alert('RETRY!')" type="button" value="enter" /><br /><br />
+
+        <input type="radio" name="p1" checked />사과
+        <input type="radio" name="p1" />배
+        <input type="radio" name="p1" />딸기
+
+        <br />
+
+        <input type="checkbox" />봄 <!--복수 선택할 때!-->
+        <input type="checkbox" />가을
+        <input type="checkbox" />겨울
+
+        <br />
+
+        <select><!--select box, combo box / 펼쳐 놓는 것이 어수선할 때 사용-->
+            <option>네이버</option>
+            <option>구글</option>
+            <option>계원</option>
+        </select>
+
+        <br />  <br />
+
+        <textarea rows="10" cols="100">내용</textarea>
+
+        <br /><br />
+
+        <input onclick="alert('로그인 되었습니다!');" type="button" value="submit" />
+
+        <br />
+
+        <button><!--html 태그 중첩 사용 가능 활용도가 더 좋음!-->
+
+            <strong>
+                <del>
+                    submit
+                </del>
+            </strong>
+        </button>
+
+            <input type="submit" value="제출" /><!--현재는 프론트엔드 / 백엔드 서버 프로그램을 짜야 작동시킬 수 있음-->
+
+    </form>
+
+    <section> <!--같은 주제를 가지고 있는 내용의 모임-->
+        <h1>구획1 제목</h1>
+        구획1 내용
+    </section>
+
+    <nav> <!--내비게이션, 페이지 이동 버튼 모임-->
+        <ul>
+            <!--<li><a href="링크주소">링크버튼</a></li>-->
+            <li><a href="https://lixngshxxchxn.github.io/subfile.html" target="_blank">중간 평가</a></li>
+        </ul>
+    </nav>
+
+    <article> <!--연관성이 다소 적은 내용의 모임-->
+        <h1>기사 제목</h1>
+        기사 내용
+    </article>
+
+    <aside> <!--연관성이 아예 없는 내용의 모임-->
+        <h1>광고 제목</h1>
+        광고 내용
+    </aside>
+
+    <header></header> <!--본문(body) 내의 서론-->
+    <footer></footer> <!--본문(body) 내의 결론-->
+
+
+    <!--canvas id 띄어쓰기 금지 / id는 고유 이름 / 틀리면 안 됨-->
+    <canvas id="myCanvas"></canvas>
+    
+    <canvas id="myCanvas"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        //get element by id / id 기준으로 요소 가져오기 png jpg로 못 하는 것들
+        var ctx = canvas.getContext("2d");
+        ctx.fillstyle = "#ff0000"
+        ctx.fillRect(25, 25, 100, 100);
+        ctx.clearRect(45, 45, 60, 60); //사각형태로 지우기
+        ctx.strokeRect(50, 50, 50, 50); //윤곽 사각형
+    
+        ctx.fillStyle = "#000000";
+        ctx.beginPath(); //선그리기 시작
+        ctx.moveTo(65, 75); //펜 들어 움직이기
+        ctx.lineTo(90, 95); //선 그으며 움직이기
+        ctx.lineTo(90, 55);
+        ctx.fill(); //내부 채우기
+    
+        ctx.beginPath();
+        ctx.arc(225, 75, 50, 0, Math.PI * 2, true); // Outer circle 
+        ctx.moveTo(260, 75);
+        ctx.arc(225, 75, 35, 0, Math.PI, false);  // Mouth (clockwise)
+        ctx.moveTo(215, 65);
+        ctx.arc(210, 65, 5, 0, Math.PI * 2, true);  // Left eye
+        ctx.moveTo(245, 65);
+        ctx.arc(240, 65, 5, 0, Math.PI * 2, true);  // Right eye
+        ctx.stroke();
+    </script>
+
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+
+
+    <audio controls>
+        <source src="audio/1AM.mp3" type="audio/mpeg">
+    </audio>
+
+    <!--mime type
+        MP4 : video/mp4
+        WebM : video/webm
+        Ogg : video/ogg
+    -->
+
+    <video width="720" height="405" controls>
+        <source src="video/BOYNEXTDOOR (보이넥스트도어) [WHO!] Concept Film (Crunch ver.).mp4" type="video/mp4">
+        <!--source src="movie.ogg" type="video/ogg"-->
+      </video>
+
+</body>
+</html>
