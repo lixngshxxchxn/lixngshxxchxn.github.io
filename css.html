@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            css
+        </title>
+   <meta chrset="utf-8" />
+   <style>
+        body{ color:blue; }
+        div { color:blueviolet; 
+            color: #c39d14;    
+            color: rgb(100%,50%,20%);
+           color: rgb(200, 20, 90);
+        }
+
+/* css 주석 */
+
+</style>
+
+<!--html 주석-->
+
+</head>
+
+<body>
+    <div id="d1">상속 개념</div>
+
+    <style type="text/css">
+        .cascade {color:green;}
+        #specifi {color:blue;}
+    </style>
+   
+   <!--<div class="cascade"> 단계적으로 적용되는 스타일 </div>
+    <div class="cascade" id="specifi"> 단계적으로 적용되는 스타일 </div>
+    <div class="cascade" id="specifi" style="color:red;"> 단계적으로 적용되는 스타일 </div>-->
+
+
+    <style>
+        /*스타일 태그는 헤드에 적는 것이 좋음*/
+        div{
+            background-color: rgb(231, 224, 255);
+            border: solid 1px black;
+        }
+        #d2{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    
+    <div id="d2">width height</div>
+
+    <br />
+
+    <style>
+        #d3{
+            padding: 30px;
+            width: 80px;
+        }
+        /*안쪽 여백 30px*/
+    </style>
+
+    <div id="d3">padding</div>
+    
+    <style>
+        #d4{
+            margin: 30px;
+        }
+    </style>
+
+    <div id="d4">margin</div>
+
+    <style>
+        *{
+            text-decoration: underline;
+        }
+        /* *=전체선택자 */
+
+        strong{ color:cadetblue; }
+        em{ color:yellowgreen; }
+    /* element selct*/
+</style>
+
+    <strong>strong</strong>
+    <em>em</em>
+    <strong>strong2</strong>
+
+
+    <style>
+        .c1{font-size: 30px;} /*class 이름은 마침표 찍어서 부름*/
+        #i1{font-size: 90px;} /*id 이름은 샵 찍어서 부름*/
+    </style>
+
+    <div class="c1">class selector</div>
+    <div id="i1">id selector</div>
+
+    <style>
+        #d5::first-line{
+            color: rgb(111, 0, 255);
+        }
+        #d5::first-letter{
+            font-size: 50px;
+        }
+        #d5::before{ content:"시작"; }
+        #d5::after{ content:"끝"; }
+        /*시작과 끝(효과)은 정보와 분리되어 있음 / 검색에 포함되지 않음*/
+    </style>
+
+    <div id="d5">
+        first line, first letter, first line, first letter, first line, first letter, first line, first letter
+        first line, first letter, first line, first letter, first line, first letter, first line, first letter
+        first line, first letter, first line, first letter, first line, first letter, first line, first letter
+        first line, first letter, first line, first letter, first line, first letter, first line, first letter
+        first line, first letter, first line, first letter, first line, first letter, first line, first letter
+        first line, first letter, first line, first letter, first line, first letter, first line, first letter
+    </div>
+
+    <style>
+        #d6 div:first-child{
+            color:chartreuse;
+        }
+        #d6 div:nth-child(2){
+            color:cadetblue;
+        }
+        #d6 div:last-child{
+            color:orange;
+        }
+    </style>
+    <div id="d6">
+        <div>div1</div>
+        <div>div2</div>
+        <div>div3</div>
+    </div>
+
+    <style>
+        /* :link, :visited, :hover, :active, :focus */
+        
+        a:link{
+            /* 링크가 있다면 */
+            color: blueviolet;
+        }
+        a:visited{
+            /*방문한 적이 있다면*/
+            color: rgb(0, 106, 255);
+        }
+        a:hover{
+            /*마우스를 올리면*/
+            color: chocolate;
+            font-weight: bold;
+        }
+        a:active{
+            /*마우스로 누르면*/
+            color: yellow;
+        }
+        a:focus{
+            /*포커스 되면*/
+            color: green;
+        }
+    </style>
+
+    <a href="http://naver.com">네이버</a>
+
+    <style>
+        #d7>span{ /*자식 요소 선택자*/
+            font-size: 40px;
+        }
+        #d7 span{ /*하위 요소 선택자*/
+            font-style: italic;
+        }
+        #d7>div>span{
+            font-weight:bold;
+        }
+    </style>
+
+    <div id="d7"> <!--부모-->
+        <span>span1</span> <!--자식-->
+        <div>
+            <span>span2</span> <!--손주-->
+        </div>
+    </div>
+
+    <style>
+        body,div,span{font-size:30px;}
+    </style>
+
+    <!--selector를 적절히 사용할 줄 알아야 함.-->
+
+    <style>
+        #d8{
+            width: 200px;
+            height: 200px;
+            border: solid 2px red;
+            border-left: solid 3px blue;
+            border-right: solid 5px green;
+            border-top: dotted 3px orange;
+            border-bottom: dashed 5px violet;
+            
+            margin: 50px;
+            margin: 50px 100px; /*상하 좌우*/
+            margin: 0px 50px 100px 150px; /*상 우 하 좌* 위에서부터 시계방향*/
+            margin-left: 0px;
+            margin-right: 50px;
+            margin-top: 100px;
+            margin-bottom: 150px;
+        
+            padding: 50px;
+            padding: 50px 100px; /*상하 좌우*/
+            padding: 0px 50px 100px 150px; /*상 우 하 좌* 위에서부터 시계방향*/
+            padding-left: 0px;
+            padding-right: 50px;
+            padding-top: 100px;
+            padding-bottom: 150px;
+        }
+    </style>
+
+    <div id="d8">box model</div>
+
+    <style>
+        #d9{
+            position:absolute;
+            left:190px;
+            top:90px;
+        }
+        #d10{
+            position: relative; /*관계형*/
+            /*relative인 부모는, absolute 자식의 기준이 된다*/
+        }
+    </style>
+
+    <div id="d10">
+        <div id="d9">absolute</div> <!--오남용 주의-->
+    </div>
+
+    <style>
+        #d11{
+            position: fixed; /*고정된*/
+            top:0px;
+            right:0px;
+        }
+    </style>
+
+    <div id="d11">fixed</div>
+
+    <style>
+        #d12{
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 60px;
+            font-style: italic;
+            text-align: center;
+            margin: 0px auto;
+            width: 300px;
+        }
+
+    </style>
+
+    <div id="d12">font family</div>
+
+    <ul>
+      <li><span style="font-family:serif;">serif : 삐침(장식)이 있는 글꼴 : ABCDabcd</span></li>
+      <li><span style="font-family:sans-serif;">sans-serif : 삐침(장식)이 없는 글꼴 : ABCDabcd</span></li>
+      <li><span style="font-family:cursive;">cursive : 필기체 : ABCDabcd</span></li>
+      <li><span style="font-family:fantasy;">fantasy : 판타지체 : ABCDabcd</span></li>
+      <li><span style="font-family:monospace;">monospace : 글자 폭과 간격이 일정 : ABCDabcd</span></li>
+    </ul>
+
+    <style>
+        #d13{
+            letter-spacing: 80px;
+            line-height: 80px;
+        }
+    </style>
+
+    <div id="d13">letter spcing line height</div>
+
+    <style>
+        #d14{
+            white-space: pre;
+        }
+    </style>
+
+    <div id="d14">
+        a   b   c
+        d   e   f
+    </div>
+
+    <style>
+        #d15{
+            min-width: 400px;
+            max-width: 800px;
+            border-radius: 10px;
+            /*text-shadow: 2px 1px 2px black; /*가로이동 세로이동 번짐 색상*/
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            width: 100px;
+        }
+    </style>
+
+    <div id="d15">min max width min max width min max width min max width min max width min max width 
+        min max width min max width min max width min max width min max width min max width min max width
+    </div>
+
+    <style>
+        #d16{
+            background-color: yellow;
+            height: 50px;
+            transition: background-color 2s, height 2s; /*두 개 이상 트랜지션은 쉼표로 구분해서 추가할 것!*/
+        }
+        #d16:hover{
+            background-color: blue;
+            height: 80px;
+        }
+    </style>
+
+    <div id="d16">transition</div>
+
+    <style>
+        @keyframes animation17{
+            /*from{ background-color: white;}
+            to{ background-color: pink;}*/
+            0%{ background-color: white;}
+            30%{ background-color: pink;}
+            100%{ background-color: red;}
+        }
+        #d17:hover{
+            animation-name:animation17;
+            animation-duration: 2s;
+        }
+    </style>
+
+    <div id="d17">animation</div>
+
+    <style>
+        .col1{
+            columns: 100px 3;
+            /*최소값 최대값*/
+        }
+    </style>
+
+    <div class="col1">
+        1절 - 동해물과 백두산이 마르고 닳도록
+        하느님이 보우하사 우리나라만세
+        무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세
+        
+        2절 - 남산위에 저 소나무 철갑을 두른듯
+        바람서리 불변함은 우리기상 일세
+        무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+        
+        3절 - 가을하늘 공활한데 높고 구름없이 
+        밝은달은 우리가슴 일편단심일세
+        무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+        
+        4절 - 이 기상과 이 맘으로 충성을 다하여
+        괴로우나 즐거우나 나라사랑하세
+        무궁화 삼천리 화려강산 대한사람 대한으로 길이보전하세
+        </div>
+
+        <style>
+            #d18{
+                display: flex;
+                /*표시 방식: 유연하게*/
+            }
+            #d18 div:nth-child(1){ flex:1 }
+            #d18 div:nth-child(2){ flex:4 }
+            #d18 div:nth-child(3){ flex:9 }
+            
+        </style>
+
+        <div id="d18">
+            <div>child1</div>
+            <div>child2</div>
+            <div>child3</div>
+        </div>
+
+        <style>
+            #d19{
+                display: flex;
+                justify-content: space-between;
+            }
+        </style>
+
+        <div id="d19">
+            <div>child1</div>
+            <div>child2</div>
+            <div>child3</div>
+        </div>
+
+        <br /><br /><br /><br /><br /><br /><br />
+
+</body>
+
+    </html>
