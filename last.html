@@ -2,32 +2,173 @@
 <html>
     <head>
         <title>KWANGHWAL</title>
-        <link rel="icon" href="lastimage/파비콘.png">
-        <script>
-            
-        </script>
+
+        <link rel="icon" href="lastimage/파비콘.png" />
 
         <style>
-            body{
-                font-family: 'DM Serif Display', serif;
+            html {
+            scroll-behavior: smooth;
+            max-width: 1388.670px;
+            height: 100%;
             }
-            .intro{
-                text-align: center;
-                font-size: 40px;
-                margin-top: 300px;
+            body{
+            width: 100%;
+            height: 100%;
+            font-family: 'DM Serif Display', serif;
+            text-align: center;
+            margin: 0;
+            }
+            .header{
+            font-size: 20px;
+            display:flex;
+            justify-content: left;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: fit-content;
+            z-index: 1;
+            }
+            ul, ol, li {
+            list-style-type: none;
+            }
+            a{
+            color: black;
+            text-decoration-line: none;
+            }
+            .header li {
+            display: inline-block;
+            padding: 0 20px;
+            }
+            #about{
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            }
+            #about img{
+            position: relative;
+            left: 550px;
+            top: 500px;
+            }
+            .about img{
+            display: block;
+            margin: auto;
+            width: 609px;
+            height: 320px;
+            box-shadow: 5px 5px 5px 5px;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+            transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+            margin-top: -10px;
+            }
+            .about:hover img{
+            box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
+            }
+            .about:hover{
+            transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+            }
+            .about:hover img, .about:hover{
+            margin-top: 0;
+            }
+            .work{
+            position: static;
+            z-index: 3;
+            }
+            .cover{
+            display: inline-block;
+            position: relative;
+            left: 250px;
+            }
+            .cover img{
+            width: 600px;
+            height: auto;
+            margin: 10px;
+            }
+            footer{
+            position: relative;
+            left: 250px;
+            padding-bottom: 100px;
+            }
+            footer ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0px;
+            }
+            footer li{
+            padding-right: 20px;
+            }
+            footer ul li img{
+            width: 30px;
+            }
+            .contact{
+            font-family: 'DM Serif Display', serif;
+            color: black;
+            position: relative;
+            left: 250px;
+            margin: 400px auto;
+            }
+            p{
+            font-size: 60px;
             }
         </style>
     </head>
 
 <body>
-    <div class="intro">
-        <p>KWANGHWAL</p>
+    
+        <div>
+            <ul class="header">
+              <li><a>KWANGHWAL</a><li>
+              <li><a href="#about" class="scroll_move">about</a><li>
+              <li><a href="#work" class="scroll_move">work</a><li>
+              <li><a href="#contact" class="scroll_move">contact</a><li>
+            </ul>
+          </div>
+
+    <div class="about" id="about">
+        <img src="lastimage/idcard.jpg" />
     </div>
-    <div id="wrap">
-        <section>about</section>
-        <section>work</section>
-        <section>contact</section>
+
+    <div class="work" id="work">
+            <div class="cover">
+                <img src="lastimage/표지1.jpg" />
+                <img src="lastimage/표지2.jpg" />
+                <img src="lastimage/표지3.jpg" />
+                <img src="lastimage/표지4.jpg" />
+                <img src="lastimage/표지5.jpg" />
+                <img src="lastimage/표지6.jpg" />
+            </div>
     </div>
+
+    <div class="contact" id="contact">
+        <p>
+            copyright 2023 rovelyou <br />
+            nativo098@gmail.com
+        </p>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <ul>
+                <li><a href="https://twitter.com/rovelyou" target="_blank"><img src="lastimage/footer1.png" /></a></li>
+                <li><a href="https://open.kakao.com/me/rovelyou" target="_blank"><img src="lastimage/footer2.png" /></a></li>
+                <li><a href="https://rovelyou.postype.com" target="_blank"><img src="lastimage/footer3.png" /></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function($) {
+        $(".scroll_move").click(function(event){
+            console.log(".scroll_move");         
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+        });
+        });
+    </script>
+
 </body>
 
 </html>
